@@ -213,7 +213,7 @@ babel-code-frame@^6.11.0, babel-code-frame@^6.22.0:
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-babel-core@^6.24.0:
+babel-core@^6.0.14, babel-core@^6.24.0:
   version "6.24.0"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.24.0.tgz#8f36a0a77f5c155aed6f920b844d23ba56742a02"
   dependencies:
@@ -404,6 +404,10 @@ babel-plugin-syntax-flow@^6.18.0:
 babel-plugin-syntax-jsx@^6.3.13, babel-plugin-syntax-jsx@^6.8.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-jsx/-/babel-plugin-syntax-jsx-6.18.0.tgz#0af32a9a6e13ca7a3fd5069e62d7b0f58d0d8946"
+
+babel-plugin-syntax-object-rest-spread@^6.8.0:
+  version "6.13.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-syntax-object-rest-spread/-/babel-plugin-syntax-object-rest-spread-6.13.0.tgz#fd6536f2bce13836ffa3a5458c4903a597bb3bf5"
 
 babel-plugin-syntax-trailing-function-commas@^6.22.0:
   version "6.22.0"
@@ -616,6 +620,13 @@ babel-plugin-transform-flow-strip-types@^6.22.0:
     babel-plugin-syntax-flow "^6.18.0"
     babel-runtime "^6.22.0"
 
+babel-plugin-transform-object-rest-spread@^6.23.0:
+  version "6.23.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-object-rest-spread/-/babel-plugin-transform-object-rest-spread-6.23.0.tgz#875d6bc9be761c58a2ae3feee5dc4895d8c7f921"
+  dependencies:
+    babel-plugin-syntax-object-rest-spread "^6.8.0"
+    babel-runtime "^6.22.0"
+
 babel-plugin-transform-react-display-name@^6.23.0:
   version "6.23.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-display-name/-/babel-plugin-transform-react-display-name-6.23.0.tgz#4398910c358441dc4cef18787264d0412ed36b37"
@@ -803,6 +814,13 @@ babel-types@^6.19.0, babel-types@^6.22.0, babel-types@^6.23.0:
     esutils "^2.0.2"
     lodash "^4.2.0"
     to-fast-properties "^1.0.1"
+
+babelify@^7.3.0:
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/babelify/-/babelify-7.3.0.tgz#aa56aede7067fd7bd549666ee16dc285087e88e5"
+  dependencies:
+    babel-core "^6.0.14"
+    object-assign "^4.0.0"
 
 babylon@^6.11.0, babylon@^6.15.0:
   version "6.16.1"
@@ -1640,6 +1658,25 @@ etag@~1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.0.tgz#6f631aef336d6c46362b51764044ce216be3c051"
 
+eth-block-tracker@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/eth-block-tracker/-/eth-block-tracker-1.0.11.tgz#0d6b4b646ccc928e86c618e4e624c480084f6d04"
+  dependencies:
+    async-eventemitter "^0.2.2"
+    babelify "^7.3.0"
+    eth-query "^2.1.0"
+    ethjs-util "^0.1.3"
+    pify "^2.3.0"
+    tape "^4.6.3"
+
+eth-query@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/eth-query/-/eth-query-2.1.0.tgz#bbf6ee4ebb510af0e4a312b09d879652283f8113"
+  dependencies:
+    async "^2.1.2"
+    json-rpc-random-id "^1.0.0"
+    xtend "^4.0.1"
+
 eth-sig-util@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/eth-sig-util/-/eth-sig-util-1.2.1.tgz#254a3e72c5c2ccb60c9dc5e6465fc7e174b6bf91"
@@ -1684,7 +1721,7 @@ ethereumjs-util@^4.0.0, ethereumjs-util@^4.0.1:
     rlp "^2.0.0"
     secp256k1 "^3.0.1"
 
-ethereumjs-util@^5.0.0, ethereumjs-util@^5.0.1, ethereumjs-util@^5.1.1:
+ethereumjs-util@^5.0.0, ethereumjs-util@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/ethereumjs-util/-/ethereumjs-util-5.1.1.tgz#122fb38dea747dc62b3aebfc365d1bd48be4b73e"
   dependencies:
@@ -2486,7 +2523,7 @@ isobject@^2.0.0:
   dependencies:
     isarray "1.0.0"
 
-isomorphic-fetch@^2.1.1, isomorphic-fetch@^2.2.0:
+isomorphic-fetch@^2.1.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
   dependencies:
@@ -2543,6 +2580,10 @@ json-rpc-error@^2.0.0:
   resolved "https://registry.yarnpkg.com/json-rpc-error/-/json-rpc-error-2.0.0.tgz#a7af9c202838b5e905c7250e547f1aff77258a02"
   dependencies:
     inherits "^2.0.1"
+
+json-rpc-random-id@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/json-rpc-random-id/-/json-rpc-random-id-1.0.1.tgz#ba49d96aded1444dbb8da3d203748acbbcdec8c8"
 
 json-schema@0.2.3:
   version "0.2.3"
@@ -3073,9 +3114,9 @@ node-pre-gyp@0.6.31, node-pre-gyp@^0.6.29:
     tar "~2.2.1"
     tar-pack "~3.3.0"
 
-node-sass@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.5.0.tgz#532e37bad0ce587348c831535dbc98ea4289508b"
+node-sass@^4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.5.2.tgz#4012fa2bd129b1d6365117e88d9da0500d99da64"
   dependencies:
     async-foreach "^0.1.3"
     chalk "^1.1.1"
@@ -3092,7 +3133,7 @@ node-sass@^4.5.0:
     nan "^2.3.2"
     node-gyp "^3.3.1"
     npmlog "^4.0.0"
-    request "^2.61.0"
+    request "^2.79.0"
     sass-graph "^2.1.1"
     stdout-stream "^1.4.0"
 
@@ -3153,7 +3194,7 @@ oauth-sign@~0.8.1:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
 
-object-assign@^4.0.1, object-assign@^4.1.0:
+object-assign@^4.0.0, object-assign@^4.0.1, object-assign@^4.1.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
@@ -4002,7 +4043,7 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
-request@2, request@^2.61.0, request@^2.67.0, request@^2.75.0:
+request@2, request@^2.67.0, request@^2.75.0, request@^2.79.0:
   version "2.81.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.81.0.tgz#c6928946a0e06c5f8d6f8a9333469ffda46298a0"
   dependencies:
@@ -4462,7 +4503,7 @@ tapable@^0.2.5, tapable@~0.2.5:
   version "0.2.6"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-0.2.6.tgz#206be8e188860b514425375e6f1ae89bfb01fd8d"
 
-tape@^4.4.0:
+tape@^4.4.0, tape@^4.6.3:
   version "4.6.3"
   resolved "https://registry.yarnpkg.com/tape/-/tape-4.6.3.tgz#637e77581e9ab2ce17577e9bd4ce4f575806d8b6"
   dependencies:
@@ -4735,11 +4776,11 @@ wbuf@^1.1.0, wbuf@^1.4.0:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-web3-polyfill@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/web3-polyfill/-/web3-polyfill-1.1.0.tgz#80de31e5a1f45ff8694ddd026963748cb93ebeb3"
+web3-polyfill@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/web3-polyfill/-/web3-polyfill-1.1.1.tgz#ab150b042fdf98449b491065ba71e5c793cf3704"
   dependencies:
-    web3-provider-engine "git://github.com/Neufund/provider-engine.git#fix-nonce-cache-for-eip55-addreses"
+    web3-provider-engine "^12.0.0"
 
 web3-provider-engine@^11.0.0:
   version "11.0.0"
@@ -4763,22 +4804,26 @@ web3-provider-engine@^11.0.0:
     xhr "^2.2.0"
     xtend "^4.0.1"
 
-"web3-provider-engine@git://github.com/Neufund/provider-engine.git#fix-nonce-cache-for-eip55-addreses":
-  version "8.4.0"
-  resolved "git://github.com/Neufund/provider-engine.git#bf4676d0bdaf644f5f1d763abf496bf1218db43f"
+web3-provider-engine@^12.0.0:
+  version "12.0.2"
+  resolved "https://registry.yarnpkg.com/web3-provider-engine/-/web3-provider-engine-12.0.2.tgz#3f0601663c59bda3f846539a09699c0d61eb75d4"
   dependencies:
     async "^2.1.2"
     clone "^2.0.0"
+    eth-block-tracker "^1.0.11"
+    eth-sig-util "^1.2.1"
     ethereumjs-block "^1.2.2"
     ethereumjs-tx "^1.2.0"
-    ethereumjs-util "^5.0.1"
+    ethereumjs-util "^5.1.1"
     ethereumjs-vm "^2.0.2"
-    isomorphic-fetch "^2.2.0"
+    fetch-ponyfill "^4.0.0"
+    json-rpc-error "^2.0.0"
+    promise-to-callback "^1.0.0"
     request "^2.67.0"
     semaphore "^1.0.3"
     solc "^0.4.2"
     tape "^4.4.0"
-    web3 "^0.16.0"
+    web3 "^0.18.4"
     xhr "^2.2.0"
     xtend "^4.0.1"
 
@@ -4794,6 +4839,16 @@ web3@^0.16.0:
 web3@^0.18.2:
   version "0.18.2"
   resolved "https://registry.yarnpkg.com/web3/-/web3-0.18.2.tgz#61b1a6edf5056820e22e1ef082f54c279f4bf758"
+  dependencies:
+    bignumber.js "git+https://github.com/debris/bignumber.js.git#94d7146671b9719e00a09c29b01a691bc85048c2"
+    crypto-js "^3.1.4"
+    utf8 "^2.1.1"
+    xhr2 "*"
+    xmlhttprequest "*"
+
+web3@^0.18.4:
+  version "0.18.4"
+  resolved "https://registry.yarnpkg.com/web3/-/web3-0.18.4.tgz#81ec1784145491f2eaa8955b31c06049e07c5e7d"
   dependencies:
     bignumber.js "git+https://github.com/debris/bignumber.js.git#94d7146671b9719e00a09c29b01a691bc85048c2"
     crypto-js "^3.1.4"
