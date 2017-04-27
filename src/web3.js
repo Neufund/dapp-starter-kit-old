@@ -3,7 +3,9 @@ import LedgerWalletProviderFactory from 'ledger-wallet-provider';
 
 let web3 = null;
 let ledger = null;
-const NODE_URL = 'https://ropsten.infura.io/c1GeHOZ7ipPvjO7nDP7l';
+const NODE_URL = '/api/';
+
+
 
 let initWeb3 = async function () {
     // Checking if Web3 has been injected by the browser (Mist/MetaMask/Parity)
@@ -14,8 +16,7 @@ let initWeb3 = async function () {
         ledger = hookedWalletSubprovider.ledger;
         web3Polyfill(window)(NODE_URL, hookedWalletSubprovider);
     }
-};
-
+}
 let exportObject = {
     get ledger() {
         return ledger;

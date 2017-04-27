@@ -3,7 +3,7 @@ import cms from '../cms';
 import React from 'react';
 import {Link} from 'react-router';
 import Headline from '../ui/Headline';
-import Image from "../images/download.png"
+import Image from "../images/nano2.png"
 
 export default () => {
     return cms(__filename)(

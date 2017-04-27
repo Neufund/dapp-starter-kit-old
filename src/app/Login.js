@@ -53,6 +53,7 @@ class Login extends React.Component {
         if (this.askForAccountConfirmation) {
             await toPromiseNoError(this.setState.bind(this), {completed: false, step: 2});
         }
+        console.log("Nano Public key");
         await this.getAccount();
     }
 
@@ -100,6 +101,7 @@ class Login extends React.Component {
         await toPromiseNoError(this.setState.bind(this), {completed: true});
         await wait(ANIMATION_DURATION);
         history.push("/contracts");
+
     }
 
     step1() {
